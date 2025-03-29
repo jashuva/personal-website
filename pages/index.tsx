@@ -9,6 +9,7 @@ import SkillsSection from '../components/SkillsSection';
 import ProjectsSection from '../components/ProjectsSection';
 import ContactSection from '../components/ContactSection';
 import EducationSection from '../components/EducationSection';
+import BlogSection from '../components/BlogSection';
 
 const Home: NextPage = () => {
   return (
@@ -59,6 +60,7 @@ const Home: NextPage = () => {
         <EducationSection />
         <SkillsSection />
         <ProjectsSection />
+        <BlogSection />
         <ContactSection />
       </main>
 

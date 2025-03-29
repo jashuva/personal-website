@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { FiArrowDown } from 'react-icons/fi';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const HeroSection = () => {
   return (
@@ -12,6 +13,25 @@ const HeroSection = () => {
           transition={{ duration: 0.8 }}
           className="text-center"
         >
+          {/* Profile Photo */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5 }}
+            className="mx-auto mb-8 relative"
+          >
+            <div className="w-40 h-40 md:w-48 md:h-48 mx-auto rounded-full overflow-hidden border-4 border-primary-500 shadow-lg">
+              <Image 
+                src="/images/profile-photo.jpg" 
+                alt="Jashuva Thupakula" 
+                width={200} 
+                height={200} 
+                className="object-cover w-full h-full"
+                priority
+              />
+            </div>
+          </motion.div>
+
           <h1 className="text-5xl md:text-7xl font-bold text-secondary-900 dark:text-white mb-6">
             Jashuva Thupakula
           </h1>

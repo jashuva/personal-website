@@ -1,8 +1,16 @@
 import { motion } from 'framer-motion';
 import { FiBriefcase } from 'react-icons/fi';
 
+interface Experience {
+  id: number;
+  title: string;
+  company: string;
+  date: string;
+  description: string[];
+}
+
 const ExperienceSection = () => {
-  const experiences = [
+  const experiences: Experience[] = [
     {
       id: 1,
       title: 'Associate Director – Software Engineering',
@@ -13,7 +21,7 @@ const ExperienceSection = () => {
         'Developed government solutions (e.g., DCCEEW tool).',
         'Streamlined processes and led Agile teams.',
         'Tech Lead for Backend Team on KymCompliance, an AI-driven compliance solution that helps organizations manage regulatory compliance at scale.',
-      ],
+      ]
     },
     {
       id: 2,
@@ -22,7 +30,7 @@ const ExperienceSection = () => {
       date: 'Jul 2021 – Sep 2021',
       description: [
         'Focused on Node.js and AWS-based backend solutions.',
-      ],
+      ]
     },
     {
       id: 3,
@@ -31,7 +39,7 @@ const ExperienceSection = () => {
       date: 'Feb 2021 – Jul 2021',
       description: [
         'Modernized corporate websites using ReactJS and microservices architecture.',
-      ],
+      ]
     },
     {
       id: 4,
@@ -40,7 +48,7 @@ const ExperienceSection = () => {
       date: 'Jul 2020 – Jan 2021',
       description: [
         'Developed LMS platforms and tools for healthcare compliance using .NET Core and Azure.',
-      ],
+      ]
     },
     {
       id: 5,
@@ -50,7 +58,7 @@ const ExperienceSection = () => {
       description: [
         'Developed cloud-native applications.',
         'Led workshops and advised clients on Azure adoption.',
-      ],
+      ]
     },
     {
       id: 6,
@@ -59,7 +67,7 @@ const ExperienceSection = () => {
       date: 'Various',
       description: [
         'Managed solution design, vendor coordination, and deployment processes.',
-      ],
+      ]
     },
   ];
 
@@ -102,17 +110,19 @@ const ExperienceSection = () => {
               </div>
               <div className="ml-6 border-l-2 border-primary-200 dark:border-primary-800 pl-6">
                 <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-2">
-                  <h3 className="text-xl font-bold text-secondary-900 dark:text-white">
-                    {exp.title}
-                  </h3>
-                  <span className="text-sm font-medium text-secondary-500 dark:text-secondary-400 md:ml-4">
+                  <div>
+                    <h3 className="text-xl font-bold text-secondary-900 dark:text-white">
+                      {exp.title}
+                    </h3>
+                    <div className="text-secondary-700 dark:text-secondary-300 font-medium">
+                      {exp.company}
+                    </div>
+                  </div>
+                  <span className="text-sm font-medium text-secondary-500 dark:text-secondary-400 md:ml-4 mt-2 md:mt-0">
                     {exp.date}
                   </span>
                 </div>
-                <div className="text-secondary-700 dark:text-secondary-300 mb-4 font-medium">
-                  {exp.company}
-                </div>
-                <ul className="space-y-2 text-secondary-700 dark:text-secondary-300">
+                <ul className="space-y-2 text-secondary-700 dark:text-secondary-300 mt-4">
                   {exp.description.map((item, idx) => (
                     <li key={idx} className="list-disc ml-5">
                       {item}

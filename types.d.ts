@@ -30,6 +30,7 @@ declare module 'react-icons/fi' {
   export const FiArrowDown: any;
   export const FiMenu: any;
   export const FiX: any;
+  export const FiCalendar: any;
 }
 
 declare module 'next-themes' {
