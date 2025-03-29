@@ -34,7 +34,7 @@ const ExperienceSection = () => {
       description: [
         'Focused on Node.js and AWS-based backend solutions.',
       ],
-      logo: '/images/companies/dulver.png'
+      logo: '/images/companies/dubber.png'
     },
     {
       id: 3,
@@ -54,7 +54,7 @@ const ExperienceSection = () => {
       description: [
         'Developed LMS platforms and tools for healthcare compliance using .NET Core and Azure.',
       ],
-      logo: '/images/companies/acqsc.png'
+      logo: '/images/companies/acg.svg'
     },
     {
       id: 5,
@@ -120,7 +120,7 @@ const ExperienceSection = () => {
                 <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-2">
                   <div className="flex items-center">
                     {exp.logo && (
-                      <div className="mr-4 w-16 h-12 relative flex-shrink-0 hidden md:flex items-center justify-center bg-white dark:bg-gray-800 rounded-md p-1 shadow-sm border border-gray-200 dark:border-gray-700">
+                      <div className="mr-4 w-16 h-12 relative flex-shrink-0 hidden md:flex items-center justify-center bg-white dark:bg-gray-100 rounded-md p-1 shadow-sm border border-gray-200 dark:border-gray-300">
                         <Image 
                           src={exp.logo} 
                           alt={`${exp.company} logo`} 
@@ -136,7 +136,7 @@ const ExperienceSection = () => {
                       </h3>
                       <div className="text-secondary-700 dark:text-secondary-300 font-medium flex items-center">
                         {exp.logo && (
-                          <div className="mr-2 w-6 h-6 relative flex-shrink-0 md:hidden bg-white dark:bg-gray-800 rounded-md p-0.5 shadow-sm flex items-center justify-center border border-gray-200 dark:border-gray-700">
+                          <div className="mr-2 w-6 h-6 relative flex-shrink-0 md:hidden bg-white dark:bg-gray-100 rounded-md p-0.5 shadow-sm flex items-center justify-center border border-gray-200 dark:border-gray-300">
                             <Image 
                               src={exp.logo} 
                               alt={`${exp.company} logo`} 

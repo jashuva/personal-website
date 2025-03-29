@@ -176,7 +176,7 @@ const ProjectsSection = () => {
                       <h3 className="text-2xl font-bold">{project.title}</h3>
                       <div className="flex items-center mt-1">
                         {project.clientLogo && (
-                          <div className="mr-3 w-10 h-8 relative flex-shrink-0 bg-white dark:bg-gray-800 rounded-md p-1 shadow-sm flex items-center justify-center border border-gray-200 dark:border-gray-700">
+                          <div className="mr-3 w-10 h-8 relative flex-shrink-0 bg-white dark:bg-gray-100 rounded-md p-1 shadow-sm flex items-center justify-center border border-gray-200 dark:border-gray-300">
                             <Image 
                               src={project.clientLogo} 
                               alt={`${project.client} logo`} 
