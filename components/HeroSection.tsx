@@ -19,9 +19,17 @@ const HeroSection = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.3, duration: 0.8 }}
-            className="text-xl md:text-2xl text-secondary-700 dark:text-secondary-300 mb-12 max-w-3xl mx-auto"
+            className="text-xl md:text-2xl text-secondary-700 dark:text-secondary-300 mb-4"
           >
-            Tech Lead · Software Engineer · Backend Specialist
+            Associate Director
+          </motion.p>
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.4, duration: 0.8 }}
+            className="text-lg md:text-xl text-secondary-600 dark:text-secondary-400 mb-12"
+          >
+            Sydney, New South Wales, Australia
           </motion.p>
           <motion.div
             initial={{ opacity: 0 }}

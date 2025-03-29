@@ -8,6 +8,7 @@ import ExperienceSection from '../components/ExperienceSection';
 import SkillsSection from '../components/SkillsSection';
 import ProjectsSection from '../components/ProjectsSection';
 import ContactSection from '../components/ContactSection';
+import EducationSection from '../components/EducationSection';
 
 const Home: NextPage = () => {
   return (
@@ -33,19 +34,29 @@ const Home: NextPage = () => {
         >
           <h2 className="section-title">About Me</h2>
           <div className="card">
-            <p>
-              I am a skilled software professional with experience in developing robust applications and solutions.
-              Currently working as a Tech Lead for the Backend Team at KPMG's KymCompliance project, an AI-driven
-              compliance solution that helps organizations manage regulatory compliance at scale.
+            <p className="mb-4">
+              Highly experienced Associate Director with 16+ years of expertise in software engineering and full-stack development. 
+              Proven track record of designing and delivering scalable, cloud-native applications using Microsoft and open-source technologies.
             </p>
-            <p>
-              My expertise lies in designing and implementing scalable systems, with a focus on delivering high-quality
-              software that meets business requirements and provides exceptional user experiences.
+            <p className="mb-4">
+              Adept in .NET Core, Azure, AWS, and modern JavaScript frameworks (React, Vue, Angular). 
+              Demonstrated success in leading agile teams, managing vendor integrations, and driving architectural decisions in complex enterprise environments.
             </p>
+            <p className="mb-4">
+              Skilled communicator and trusted technical advisor with deep understanding of solution design, stakeholder engagement, 
+              and secure application delivery in both public and private sectors.
+            </p>
+            <div className="mt-6 p-4 bg-secondary-50 dark:bg-secondary-800/50 rounded-lg">
+              <p className="flex items-center">
+                <span className="font-semibold mr-2">Security Clearance:</span> 
+                Negative Vetting Level 1 (NV1) – Eligible for secure government projects
+              </p>
+            </div>
           </div>
         </motion.div>
         
         <ExperienceSection />
+        <EducationSection />
         <SkillsSection />
         <ProjectsSection />
         <ContactSection />

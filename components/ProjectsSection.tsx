@@ -1,36 +1,48 @@
 import { motion } from 'framer-motion';
-import { FiExternalLink, FiGithub } from 'react-icons/fi';
-import Link from 'next/link';
+import { FiGlobe, FiServer, FiDatabase, FiCloud } from 'react-icons/fi';
 
 const ProjectsSection = () => {
   const projects = [
     {
       id: 1,
-      title: 'KymCompliance',
-      description: 'AI-driven compliance solution that helps organizations manage regulatory compliance at scale. Transforms complex regulations into actionable obligations and optimizes controls.',
-      technologies: ['AI', 'Machine Learning', 'Backend Development', 'Regulatory Tech'],
-      image: '/images/project-kym.jpg',
-      link: 'https://kpmg.com/au/en/home/technology-solutions/ai-compliance.html',
-      github: '',
+      title: 'Climate Change Risk Assessment Tool',
+      client: 'DCCEEW (Gov Dept)',
+      description: 'Designed and implemented the backend architecture in .NET 8 and Azure',
+      icon: <FiCloud size={24} />,
+      iconBg: 'bg-blue-100 dark:bg-blue-900/30',
+      iconColor: 'text-blue-600 dark:text-blue-400',
+      technologies: ['.NET 8', 'Azure', 'C#', 'REST APIs']
     },
     {
       id: 2,
-      title: 'Project Two',
-      description: 'A sample project description. This would be replaced with actual project information for a real portfolio website.',
-      technologies: ['React', 'Node.js', 'MongoDB', 'Express'],
-      image: '/images/project-2.jpg',
-      link: '#',
-      github: 'https://github.com/',
+      title: 'Assisted School Transport Program',
+      client: 'NSW DoE',
+      description: 'Integrated AWS services with Azure AD using secure APIs',
+      icon: <FiServer size={24} />,
+      iconBg: 'bg-green-100 dark:bg-green-900/30',
+      iconColor: 'text-green-600 dark:text-green-400',
+      technologies: ['AWS', 'Azure AD', 'API Integration', 'Security']
     },
     {
       id: 3,
-      title: 'Project Three',
-      description: 'A sample project description. This would be replaced with actual project information for a real portfolio website.',
-      technologies: ['Python', 'Django', 'PostgreSQL', 'Docker'],
-      image: '/images/project-3.jpg',
-      link: '#',
-      github: 'https://github.com/',
+      title: 'Federation University Open Day Website',
+      client: 'Federation University',
+      description: 'Built virtual event platform using Azure App Services, .NET, and React',
+      icon: <FiGlobe size={24} />,
+      iconBg: 'bg-purple-100 dark:bg-purple-900/30',
+      iconColor: 'text-purple-600 dark:text-purple-400',
+      technologies: ['Azure App Services', '.NET', 'React', 'Virtual Events']
     },
+    {
+      id: 4,
+      title: 'REST Super Website Rebranding',
+      client: 'REST Super',
+      description: 'Migrated CMS and modernized frontend using Vue.js and MVC architecture',
+      icon: <FiDatabase size={24} />,
+      iconBg: 'bg-yellow-100 dark:bg-yellow-900/30',
+      iconColor: 'text-yellow-600 dark:text-yellow-400',
+      technologies: ['Vue.js', 'MVC', 'CMS Migration', 'Frontend Development']
+    }
   ];
 
   const containerVariants = {
@@ -55,71 +67,49 @@ const ProjectsSection = () => {
   };
 
   return (
-    <section className="section bg-secondary-50 dark:bg-secondary-800/30" id="projects">
-      <div className="container mx-auto">
-        <h2 className="section-title">Projects</h2>
-        
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-        >
-          {projects.map((project) => (
-            <motion.div key={project.id} variants={itemVariants} className="card h-full flex flex-col">
-              <div className="w-full h-48 bg-secondary-200 dark:bg-secondary-700 rounded-t-lg mb-4 overflow-hidden">
-                <div className="w-full h-full flex items-center justify-center text-secondary-400 dark:text-secondary-500">
-                  {project.title} Preview
-                </div>
+    <section className="section container" id="projects">
+      <h2 className="section-title">Projects & Highlights</h2>
+      
+      <motion.div
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: "-100px" }}
+        className="grid grid-cols-1 md:grid-cols-2 gap-8"
+      >
+        {projects.map((project) => (
+          <motion.div
+            key={project.id}
+            variants={itemVariants}
+            className="bg-white dark:bg-secondary-800 rounded-xl p-6 shadow-md border border-secondary-100 dark:border-secondary-700 hover:shadow-lg transition-shadow duration-300"
+          >
+            <div className="flex items-center mb-4">
+              <div className={`p-4 rounded-lg ${project.iconBg} ${project.iconColor} mr-4`}>
+                {project.icon}
               </div>
-              
-              <h3 className="text-xl font-bold mb-2">{project.title}</h3>
-              
-              <p className="text-secondary-700 dark:text-secondary-300 mb-4 flex-grow">
-                {project.description}
-              </p>
-              
-              <div className="mb-4">
-                <div className="flex flex-wrap gap-2">
-                  {project.technologies.map((tech) => (
-                    <span
-                      key={tech}
-                      className="text-xs font-medium px-2 py-1 rounded-full bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300"
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
+              <div>
+                <h3 className="text-xl font-bold">{project.title}</h3>
+                <p className="text-secondary-600 dark:text-secondary-400">{project.client}</p>
               </div>
-              
-              <div className="flex gap-4 mt-auto">
-                {project.link && (
-                  <a
-                    href={project.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-primary-600 hover:text-primary-800 dark:text-primary-400 dark:hover:text-primary-300 flex items-center"
-                  >
-                    <FiExternalLink className="mr-1" /> View Project
-                  </a>
-                )}
-                
-                {project.github && (
-                  <a
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-primary-600 hover:text-primary-800 dark:text-primary-400 dark:hover:text-primary-300 flex items-center"
-                  >
-                    <FiGithub className="mr-1" /> Code
-                  </a>
-                )}
-              </div>
-            </motion.div>
-          ))}
-        </motion.div>
-      </div>
+            </div>
+            
+            <p className="text-secondary-700 dark:text-secondary-300 mb-4">
+              {project.description}
+            </p>
+            
+            <div className="flex flex-wrap gap-2 mt-4">
+              {project.technologies.map((tech, index) => (
+                <span 
+                  key={index}
+                  className={`px-3 py-1 text-sm font-medium rounded-full ${project.iconBg} ${project.iconColor}`}
+                >
+                  {tech}
+                </span>
+              ))}
+            </div>
+          </motion.div>
+        ))}
+      </motion.div>
     </section>
   );
 };

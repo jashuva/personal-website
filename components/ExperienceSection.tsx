@@ -5,39 +5,60 @@ const ExperienceSection = () => {
   const experiences = [
     {
       id: 1,
-      title: 'Tech Lead, Backend Team',
+      title: 'Associate Director – Software Engineering',
       company: 'KPMG Australia',
-      project: 'KymCompliance',
-      date: 'Present',
+      date: 'Sep 2021 – Present',
       description: [
-        'Leading the backend development team for KymCompliance, an AI-driven compliance solution that helps organizations manage regulatory compliance at scale.',
-        'Architecting scalable systems that transform complex regulations into actionable obligations.',
-        'Implementing AI-powered features that predict impact and optimize controls against industry standards.',
-        'Collaborating with cross-functional teams to deliver a comprehensive compliance management platform.',
+        'Lead solutions in .NET Core, Azure, and cloud-first architecture.',
+        'Developed government solutions (e.g., DCCEEW tool).',
+        'Streamlined processes and led Agile teams.',
+        'Tech Lead for Backend Team on KymCompliance, an AI-driven compliance solution that helps organizations manage regulatory compliance at scale.',
       ],
     },
     {
       id: 2,
-      title: 'Previous Position',
-      company: 'Previous Company',
-      date: '2020 - 2023',
+      title: 'Senior Software Engineer',
+      company: 'Dubber Corporation',
+      date: 'Jul 2021 – Sep 2021',
       description: [
-        'Led development of key features and functionality.',
-        'Collaborated with cross-functional teams to deliver high-quality solutions.',
-        'Optimized application performance and ensured code quality.',
-        'Mentored junior developers and implemented best practices.',
+        'Focused on Node.js and AWS-based backend solutions.',
       ],
     },
     {
       id: 3,
-      title: 'Earlier Position',
-      company: 'Earlier Company',
-      date: '2018 - 2020',
+      title: 'Senior Software Engineer',
+      company: 'Fisher & Paykel Healthcare',
+      date: 'Feb 2021 – Jul 2021',
       description: [
-        'Developed and maintained applications using modern technologies.',
-        'Implemented new features and fixed bugs in existing codebase.',
-        'Participated in code reviews and technical discussions.',
-        'Collaborated with team members to meet project deadlines.',
+        'Modernized corporate websites using ReactJS and microservices architecture.',
+      ],
+    },
+    {
+      id: 4,
+      title: 'Senior Developer',
+      company: 'Aged Care Quality & Safety Commission',
+      date: 'Jul 2020 – Jan 2021',
+      description: [
+        'Developed LMS platforms and tools for healthcare compliance using .NET Core and Azure.',
+      ],
+    },
+    {
+      id: 5,
+      title: 'Consultant Developer',
+      company: 'Microsoft NZ',
+      date: 'Jan 2019 – Jul 2020',
+      description: [
+        'Developed cloud-native applications.',
+        'Led workshops and advised clients on Azure adoption.',
+      ],
+    },
+    {
+      id: 6,
+      title: '.NET Developer / Team Lead',
+      company: 'Federation University, ACG, NSW Transport (Multiple Projects)',
+      date: 'Various',
+      description: [
+        'Managed solution design, vendor coordination, and deployment processes.',
       ],
     },
   ];
@@ -82,7 +103,7 @@ const ExperienceSection = () => {
               <div className="ml-6 border-l-2 border-primary-200 dark:border-primary-800 pl-6">
                 <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-2">
                   <h3 className="text-xl font-bold text-secondary-900 dark:text-white">
-                    {exp.title} {exp.project && <span className="text-primary-600 dark:text-primary-400">| {exp.project}</span>}
+                    {exp.title}
                   </h3>
                   <span className="text-sm font-medium text-secondary-500 dark:text-secondary-400 md:ml-4">
                     {exp.date}
