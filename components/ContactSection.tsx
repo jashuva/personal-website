@@ -28,15 +28,28 @@ const ContactSection = () => {
     e.preventDefault();
     setFormStatus({ isSubmitting: true, isSubmitted: false, isError: false });
     
-    // In a real implementation, you would send the form data to a backend service
-    // This is a simulated submission
     try {
-      // Simulate API call
-      await new Promise((resolve) => setTimeout(resolve, 1500));
+      // Send the form data to Formspree
+      const response = await fetch('https://formspree.io/f/xpwpjrrk', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+        }),
+      });
       
-      // Reset form after successful submission
-      setFormData({ name: '', email: '', subject: '', message: '' });
-      setFormStatus({ isSubmitting: false, isSubmitted: true, isError: false });
+      if (response.ok) {
+        // Reset form after successful submission
+        setFormData({ name: '', email: '', subject: '', message: '' });
+        setFormStatus({ isSubmitting: false, isSubmitted: true, isError: false });
+      } else {
+        throw new Error('Form submission failed');
+      }
     } catch (error) {
       setFormStatus({ isSubmitting: false, isSubmitted: false, isError: true });
     }
@@ -52,13 +65,13 @@ const ContactSection = () => {
     {
       icon: <FiMail />,
       title: 'Email',
-      content: 'contact@example.com',
-      link: 'mailto:contact@example.com',
+      content: 'jthupakula@kpmg.com.au',
+      link: 'mailto:jthupakula@kpmg.com.au',
     },
     {
       icon: <FiMapPin />,
       title: 'Location',
-      content: 'Australia',
+      content: 'Sydney, Australia',
       link: null,
     },
   ];
