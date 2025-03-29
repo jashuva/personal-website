@@ -31,6 +31,8 @@ declare module 'react-icons/fi' {
   export const FiMenu: any;
   export const FiX: any;
   export const FiCalendar: any;
+  export const FiFolder: any;
+  export const FiFileText: any;
 }
 
 declare module 'next-themes' {
