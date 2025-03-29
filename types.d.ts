@@ -24,6 +24,8 @@ declare module 'react-icons/fi' {
   export const FiGitHub: any;
   export const FiAward: any;
   export const FiBookOpen: any;
+  export const FiSend: any;
+  export const FiMapPin: any;
 }
 
 declare module 'next-themes' {
