@@ -26,6 +26,10 @@ declare module 'react-icons/fi' {
   export const FiBookOpen: any;
   export const FiSend: any;
   export const FiMapPin: any;
+  export const FiBriefcase: any;
+  export const FiArrowDown: any;
+  export const FiMenu: any;
+  export const FiX: any;
 }
 
 declare module 'next-themes' {
